@@ -8,7 +8,7 @@
 ##       modelos de entidades, automaticamente o Sequelize cria as Tables quando o projeto é iniciado, caso ainda não tenha sido criado.
 #
 # Configurações de Controladores: Responsável por gerenciar as trativas das principais funções de um CRUD de uma determinada Entidade
-#  - api/controllers/
+##  - api/controllers/
 # Configuração de Rotas: Gerenciamento e definição dos endpoints que uma REST API possa fornecer em conjunto com as controllers que recebem tais informações.
 ##  - api/routes/
 ## Duas rotas foram criadas como exemplo:
