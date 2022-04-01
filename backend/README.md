@@ -13,5 +13,5 @@
 ##  - api/routes/
 ## Duas rotas foram criadas como exemplo:
 ### Request do tipo GET
-### - http://localhost:portadefinida/device
-### - http://localhost:portadefinida/category
+### - http://localhost:3307/device
+### - http://localhost:3307/category
