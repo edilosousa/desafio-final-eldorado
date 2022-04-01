@@ -1,3 +1,3 @@
 exports.create = (req, res) => {
-    return res.send("<p>Criação de category</p>")
+    return res.send("Criação de category")
 };
