@@ -4,7 +4,7 @@ module.exports = app => {
     var router = require("express").Router();
   
     // Rota para Criar um novo agenda
-    router.post("/", devices.create);
+    router.get("/", devices.create);
   
     app.use('/api/category', router);
   };
