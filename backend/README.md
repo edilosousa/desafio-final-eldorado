@@ -13,5 +13,5 @@
 ##  - src/routes/
 ## Duas rotas foram criadas como exemplo:
 ### Request do tipo GET
-### - http://localhost:3000/src/device
-### - http://localhost:3000/src/category
+### - http://localhost:3000/api/device
+### - http://localhost:3000/api/category
