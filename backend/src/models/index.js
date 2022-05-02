@@ -23,5 +23,5 @@ db.sequelize = sequelize;
 
 db.category = require("./category.model")(sequelize, Sequelize);
 db.device = require("./device.model")(sequelize, Sequelize);
-
+db.login = require("./login.model")(sequelize, Sequelize);
 module.exports = db;
