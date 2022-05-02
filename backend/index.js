@@ -4,6 +4,7 @@ const app = express()
 const port = 3000
 var bodyParser = require('body-parser')
 
+
 app.use(cors())
 app.use(bodyParser.json())
 
@@ -12,6 +13,7 @@ db.sequelize.sync()
 
 require('./src/routes/device.route')(app)
 require('./src/routes/category.route')(app)
+require('./src/routes/login.route')(app)
 
 app.listen(port, () => {
     console.log(`App listen in port ${port}`)

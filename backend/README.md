@@ -15,3 +15,9 @@
 ### Request do tipo GET
 ### - http://localhost:3000/api/device
 ### - http://localhost:3000/api/category
+## Request do tipo POST
+### - http://localhost:3000/api/login
+
+## Observações:
+### jsonwebtoken: pacote que implementa o protocolo JSON Web Token;
+### dotenv-safe: pacote para gerenciar facilmente variáveis de ambiente, não é obrigatório para JWT, mas uma boa    prática para configurações em geral;
