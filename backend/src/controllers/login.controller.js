@@ -18,7 +18,7 @@ exports.signin = async (req, res) => {
             // console.log(consulta[0]['LOG_ID'])
             const id = consulta[0]['LOG_ID'];
             const token = jwt.sign({ id }, process.env.SECRET, {
-                expiresIn: 3000 //milisegundos 
+                expiresIn: 20 //milisegundos 
             });
             return res.json({ auth: true, token: token });
             // return res.status(200).json(consulta)
@@ -27,7 +27,6 @@ exports.signin = async (req, res) => {
 };
 
 exports.validarToken = async(req, res, next) => {
-    //return res.json({messagem: "Validar token"});
     const authHeader = req.headers.authorization;
     const [bearer, token] = authHeader.split(' ');
 
@@ -40,7 +39,7 @@ exports.validarToken = async(req, res, next) => {
 
     try {
         const decoded = await promisify(jwt.verify)(token, process.env.SECRET);
-        req.userId = decoded.id;
+        // req.userId = decoded.id;
 
         return next();
     } catch (err) {
