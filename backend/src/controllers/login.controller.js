@@ -18,7 +18,7 @@ exports.signin = async (req, res) => {
             // console.log(consulta[0]['LOG_ID'])
             const id = consulta[0]['LOG_ID'];
             const token = jwt.sign({ id }, process.env.SECRET, {
-                expiresIn: 20 //milisegundos 
+                expiresIn: 600 //segundos 
             });
             return res.json({ auth: true, token: token });
             // return res.status(200).json(consulta)
