@@ -9,8 +9,8 @@
   </nav>
   
   <div class="row mt-5">
-    <div class="col"></div>
-    <div class="col">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
       <form
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
@@ -18,7 +18,7 @@
         novalidate
         class="fs-4"
       >
-        <div class="card" style="width: 18rem">
+        <div class="card">
           <div class="card-body ">
             <div class="form-control">
               <label class="form-label">Login</label>
@@ -30,12 +30,12 @@
           <div class="card-footer">
             <div class="d-grid gap-2">
               <button class="btn btn-primary btn-sm" type="submit">Entrar</button>
-              <button class="btn btn-secondary btn-sm" type="button">Registra-se</button>
+              <!-- <button class="btn btn-secondary btn-sm" type="button">Registra-se</button> -->
             </div>
           </div>
         </div>
       </form>
     </div>
-    <div class="col"></div>
+    <div class="col-sm-4"></div>
   </div>
 </div>
