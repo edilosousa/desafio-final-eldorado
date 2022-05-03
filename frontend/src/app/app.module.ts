@@ -12,6 +12,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CategoryComponent } from './componentes/category/category.component';
 import { DeviceComponent } from './componentes/device/device.component';
 import { AddCategoryComponent } from './componentes/category/add-category/add-category.component';
+import { AddDeviceComponent } from './componentes/device/add-device/add-device.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddCategoryComponent } from './componentes/category/add-category/add-ca
     HomeComponent,
     CategoryComponent,
     DeviceComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AddDeviceComponent
   ],
   imports: [
     BrowserModule,

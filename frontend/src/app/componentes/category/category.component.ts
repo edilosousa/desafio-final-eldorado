@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
 
   onDeleteCategory(categoryId: number): void {
     this.categoryService.deleteCategory(categoryId).subscribe(response => {
+      alert("Categoria Deletada com sucesso!")
         this.listCategory()
     })
   }

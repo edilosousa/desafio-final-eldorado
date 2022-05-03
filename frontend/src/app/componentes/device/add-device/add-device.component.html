@@ -31,31 +31,24 @@
       <div class="col-sm-10">
         <div class="card" style="width: 100%">
           <div class="card-header bg-info">
-            <h5 class="card-title">Device</h5>
-            <button class="btn btn-success float-end" routerLink="/addDevice">Add</button>
+            <h5 class="card-title">Add Device</h5>
+            <button class="btn btn-success btn-sm float-end" routerLink="/devices">Voltar</button>
           </div>
           <div class="card-body">
-            <table class="table table-striped">
-              <thead>
-                <th scope="col">ID</th>
-                <th scope="col">NAME</th>
-                <th scope="col">COLOR</th>
-                <th scope="col">PARTNUMBER</th>
-                <th scope="col">CATEGORIA</th>
-              </thead>
-              <tbody>
-                <tr  *ngFor="let devices of device; let i = index">
-                  <td>{{ devices.DEV_ID }}</td>
-                  <td>{{ devices.DEV_NAME }}</td>
-                  <td>{{ devices.DEV_COLOR }}</td>
-                  <td>{{ devices.DEV_PARTNUMBER }}</td>
-                  <td>{{ devices.DEV_FK_ID_CATEGORY }}</td>
-                  <td><button class="btn btn-sm btn-info" (click)="onDeleteDevice(devices.DEV_ID)">Deletar</button></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Descrição</label>
+              <input type="text" class="form-control" [(ngModel)]="deviceName" name="deviceName">
+              <label for="exampleFormControlInput1" class="form-label">Cor</label>
+              <input type="text" class="form-control" [(ngModel)]="deviceCor" name="deviceCor">
+              <label for="exampleFormControlInput1" class="form-label">Partnumber</label>
+              <input type="text" class="form-control" [(ngModel)]="devicePartnumber" name="devicePartnumber">
+              <label for="exampleFormControlInput1" class="form-label">Categoria</label>
+              <input type="text" class="form-control" [(ngModel)]="deviceCategoria" name="deviceCategoria">
+            </div>
           </div>
-          <div class="card-footer"></div>
+          <div class="card-footer">
+            <button class="btn btn-success btn-sm" (click)="onCreateDevice()">Salvar</button>
+          </div>
         </div>
       </div>
     </div>
