@@ -25,7 +25,7 @@ export class CategoryService {
   }
 
   createCategory(category: Category){
-    return this.httpClient.post(`${this.baseUrl}/add`, category, this.getOptions())
+    return this.httpClient.post(`${this.baseUrl}/add`, {category_name:category.CAT_NOME}, this.getOptions())
   }
 
   listCategory() {
