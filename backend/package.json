@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/edilosousa/desafio-final-eldorado#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
@@ -31,5 +32,9 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3",
+    "supertest": "^6.2.3"
   }
 }
