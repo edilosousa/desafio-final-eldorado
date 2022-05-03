@@ -37,7 +37,7 @@ exports.signin = async (req, res) => {
         if (bcrypt.compareSync(password, user.LOG_PASSWORD)) {
             const id = user.LOG_ID;
             const token = jwt.sign({ id }, process.env.SECRET, {
-                expiresIn: 600 //segundos 
+                expiresIn: 6000000 //segundos 
             });
             return res.json({ auth: true, token: token });
             // return res.status(200).json(consulta)
