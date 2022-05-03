@@ -1,14 +1,11 @@
-const {validarRota} = require('../controllers/login.controller') 
 module.exports = app => {
     const login = require("../controllers/login.controller");
-  
     var router = require("express").Router();
   
-    
+    //Rota de validação de login
     router.post("/", login.signin);
-
-    // router.get('/teste', login.teste)
-    router.get('/teste', validarRota, login.teste)
-  
+    //Rota para Criar novo usuário
+    router.post("/create", login.create);
+    //Rota Api padrão de login
     app.use('/api/login', router);
   };

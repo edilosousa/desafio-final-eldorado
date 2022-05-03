@@ -6,6 +6,26 @@ const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 const bcrypt = require('bcryptjs')
 
+//Criar novo usuario
+exports.create = async (req, res) => {
+    const newPassword = await bcrypt.hash(req.body.user_password, 8);
+    const userNew = {
+        LOG_NOME: req.body.user_name,
+        LOG_EMAIL: req.body.user_email,
+        LOG_PASSWORD: newPassword
+    };
+    await Login.create(userNew)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Erro ao criar um novo registro"
+            });
+        });
+};
+//Logar em conta existente
 exports.signin = async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
@@ -73,7 +93,7 @@ exports.signin = async (req, res) => {
 //         }
 //         return res.status(404).json({"msg":"Usuário inválido"})
 };
-
+//Validação de rotas via JWT 
 exports.validarRota = async(req, res, next) => {
     const authHeader = req.headers.authorization;
     const [bearer, token] = authHeader.split(' ');
@@ -96,7 +116,3 @@ exports.validarRota = async(req, res, next) => {
         });
     }
 };
-
-exports.teste = (req,res) => {
-    return res.json({"msg":"Validado com sucesso"})
-}
